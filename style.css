@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css?family=Gudea:400,700");
+
+html{
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+*:focus, *::before:focus, *::after:focus {
+  outline: none;
+}
+
+* {
+  font-family: "Gudea", sans-serif;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  height: 100vh;
+  background-color: #acd1d2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  cursor: none;
+}
+
+#wrapper {
+  position: relative;
+  width: 70%;
+  height: 80%;
+}
+
+#circle {
+  position: fixed;
+  z-index: 5;
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: background ease-in 10ms, box-shadow ease-in 150ms, transform ease-in 150ms;
+  transform: translate3d(0, 0, 0);
+}
+
+.box{
+  margin: 0;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#box-1 {
+  background-color: #e8edf3;
+}
+
+#box-1:hover ~ #circle {
+  background-color: #e6cf8b;
+  box-shadow: 0 0 0 0 transparent, inset 0em -0.3em 0.4em 0.2em #ca9e03a6;
+}
+
+#box-2 {
+  background-color: #e6cf8b;
+}
+
+#box-2:hover ~ #circle {
+  background-color: transparent;
+  box-shadow: 0 0 0 3px #b56969;
+}
+
+#box-3 {
+  background-color: #b56969;
+}
+
+#box-3:hover ~ #circle {
+  background-color: #e6cf8b;
+  transform: scale(0.5) translate3d(0, 0, 0);
+}
+
+#box-4 {
+  background-color: #1d1f31;
+  color: #fff;
+}
+
+#box-4:hover ~ #circle {
+  background: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
